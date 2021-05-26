@@ -43,6 +43,54 @@
 @import "utilities";
 @import "print";
 
-body {
-    color: $blue
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+$text-color: #121212;
+$bg-color: #F0F0F0;
+$btn-color: #E4C1AE;
+
+html, body {
+    height: 100%;
+    background-color: $bg-color;
 }
+
+.main {
+    margin: 0 -15px;
+    font-family: Roboto;
+    color: $text-color;
+    .btn-card {
+        float: right;
+        background-color: $btn-color;
+        border: none;
+        color: $white;
+        padding: 10px 40px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+    .card-body {
+        background-color: $white;
+        padding: 5rem 2rem;
+    }
+
+    .card-title {
+        font-weight: bold;
+        margin-bottom: 43px;
+    }
+
+    .card-text {
+        font-weight: 300;
+        margin-bottom: 35px;
+    }
+    .image {
+        min-height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+@media (min-width: $grid-breakpoints($lg)) {
+    .main .card-body {
+        padding: 7rem;
+    } }
+
